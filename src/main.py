@@ -1,3 +1,5 @@
+from services import SharePoint
+
 def main():
     """
     1. Conecta ao SharePoint;
@@ -14,7 +16,8 @@ def main():
     upload_file(new_vrm_file)
     upload_file(new_vendor_risk_file)
     """
-    ...
+    new_connection = SharePoint()
+    new_connection.connect_to_service()
 
 
 if __name__ == '__main__':

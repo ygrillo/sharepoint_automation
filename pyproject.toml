@@ -1,18 +1,23 @@
 [project]
-name = "py-uv"
+name = "sharePoint_automation"
 version = "0.1.0"
-description = "Add your description here"
+description = "Allow users to upload files to SharePoint and move them between folders."
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "office365-rest-python-client>=2.5.14",
+    "python-dotenv>=1.0.1",
+]
 
 [dependency-groups]
 dev = [
+    "pre-commit>=4.0.1",
     "taskipy>=1.14.1",
 ]
 
 [tool.taskipy.tasks]
 main = { cmd="uv run main.py", help="Runs main file" }
+ruff = { cmd="uv run ruff check", help="Check if there's any error" }
 
 [tool.ruff]
 line-length = 100
