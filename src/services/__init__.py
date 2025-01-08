@@ -1,1 +1,1 @@
-from .sharepoint import SharePoint
+from .sharepoint import SharePoint as SharePoint
